@@ -1,24 +1,21 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
-namespace Classes
+namespace Boxing
 {
-    public class Person
-    {
-        public string Name;
-
-        public void Introduce(string to)
-        {
-            System.Console.WriteLine("Hi {0}, my name is {1}", to, Name);
-        }
-    }
 
     class Program
     {
         static void Main(string[] args)
         {
-            var person = new Person();
-            person.Name = "Greg";
-            person.Introduce("Buttface");
+            var list = new ArrayList();
+            list.Add(1);
+            list.Add("greg");
+            list.Add(DateTime.Today);
+            
+            var anotherList = new List<int>();
+            anotherList.Add(1);
         }
     }
 }
