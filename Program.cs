@@ -1,17 +1,15 @@
 ﻿using System;
-/* Allows us to delegate a method to an inherited
- * class; forces said child class to implement that method */
-namespace AbstractClasses
+
+namespace Testability
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var circle = new Circle();
-            circle.Draw();
+            var orderProcessor = new OrderProcessor(new ShippingCalculator());
+            var order = new Order { DatePlaced = DateTime.Now, TotalPrice = 100f };
 
-            var rectangle = new Rectangle();
-            rectangle.Draw();
+            orderProcessor.Process(order);
         }
     }
 }
