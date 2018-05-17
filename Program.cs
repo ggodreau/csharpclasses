@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MethodOverriding
+/* Allows us to delegate a method to an inherited
+ * class; forces said child class to implement that method */
+namespace AbstractClasses
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var shapes = new List<Shape>();
-            shapes.Add(new Circle());
-            shapes.Add(new Rectangle());
+            var circle = new Circle();
+            circle.Draw();
 
-            var canvas = new Canvas();
-            canvas.DrawShapes(shapes);
+            var rectangle = new Rectangle();
+            rectangle.Draw();
         }
     }
 }
