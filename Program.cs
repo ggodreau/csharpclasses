@@ -1,21 +1,19 @@
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace Boxing
+namespace MethodOverriding
 {
-
     class Program
     {
         static void Main(string[] args)
         {
-            var list = new ArrayList();
-            list.Add(1);
-            list.Add("greg");
-            list.Add(DateTime.Today);
-            
-            var anotherList = new List<int>();
-            anotherList.Add(1);
+            var shapes = new List<Shape>();
+            shapes.Add(new Circle());
+            shapes.Add(new Rectangle());
+
+            var canvas = new Canvas();
+            canvas.DrawShapes(shapes);
         }
     }
 }
