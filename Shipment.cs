@@ -1,8 +1,10 @@
 ﻿using System;
 
-namespace Testability
+namespace myApp
 {
-    class Shipment
+    public class Shipment
     {
+        public float Cost { get; set; }
+        public DateTime ShippingDate { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Testability
+namespace myApp
 {
     public interface IShippingCalculator
     {
