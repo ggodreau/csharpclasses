@@ -6,7 +6,7 @@ namespace Extensibility
     {
         static void Main(string[] args)
         {
-            var dbMigrator = new DbMigrator(new ConsoleLogger());
+            var dbMigrator = new DbMigrator(new FileLogger("C:\\Users\\user\\Downloads\\mosh.txt"));
             dbMigrator.Migrate();
         }
     }
